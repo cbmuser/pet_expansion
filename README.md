@@ -9,12 +9,19 @@ two bigger Atmel-Flashs will be the right choice.
 The device uses address-lines above the screen-ram:
 
 RAM0 : $8c00
+<<<<<<< HEAD
 
 RAM1 : $8d00
 
 SID  : $8f00  
 
 The first, early alpha-software and low-level routines will be released for BASIC4-ROMs.
+=======
+RAM1 : $8d00
+SID  : $8f00  
+
+
+>>>>>>> origin/main
 
 ![PCB](https://github.com/cbmuser/PET_EXPANSION/blob/main/images/pet_expansion_top.jpg)
 
