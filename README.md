@@ -2,7 +2,7 @@
 Memory, Flash and SID-Device
 
 The trinity-device for the CBM PET2001. You can use up to 512kBx8 Atmel-Flash and SRAM for storing and buffering of data. The SID gives the CBM the ability to play nice chiptunes. 
-It's also possible to use it as 1 Megabyte SRAM oder Flash-Device. If you want to capture old disks, the RAM-only variante may be useful. For a virtual, non-volatile Memory-Drive, 
+It's also possible to use it as 1 Megabyte SRAM or Flash-Device. If you want to capture old disks, the RAM-only variante may be useful. For a virtual, non-volatile Memory-Drive, 
 two bigger Atmel-Flashs will be the right choice. 
 
 
