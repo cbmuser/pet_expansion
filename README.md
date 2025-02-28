@@ -16,7 +16,7 @@ SID  : $8f00
 
 The first, early alpha-software and low-level routines will be released for BASIC4-ROMs.
 
-
+![PCB](https://github.com/cbmuser/PET_EXPANSION/blob/main/images/3device.jpg)
 
 ![PCB](https://github.com/cbmuser/PET_EXPANSION/blob/main/images/pet_expansion_top.jpg)
 
