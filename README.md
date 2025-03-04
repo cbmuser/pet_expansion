@@ -24,7 +24,7 @@ The pcb is easily reconfigurable for SRAM 512kbx8 or ATMEL-Flash.
 
 
 
-#Software
+## Software
 
 ![IMAGE](https://github.com/cbmuser/PET_EXPANSION/blob/main/images/periscope.jpg)
 
