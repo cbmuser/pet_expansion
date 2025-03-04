@@ -28,4 +28,4 @@ The pcb is easily reconfigurable for SRAM 512kbx8 or ATMEL-Flash.
 
 ![IMAGE](https://github.com/cbmuser/PET_EXPANSION/blob/main/images/periscope.jpg)
 
-The Periscope ist the monitor to discover problems or check sectors of a 64kB block. The tool awaits hexadecimal input for track and sector values. 
+The Periscope ist the monitor to discover problems or check sectors of a 64kB block. The tool awaits hexadecimal inputs for track and sector values. 
