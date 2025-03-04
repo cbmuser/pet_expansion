@@ -21,3 +21,11 @@ The first, early alpha-software and low-level routines will be released for BASI
 ![PCB](https://github.com/cbmuser/PET_EXPANSION/blob/main/images/pet_expansion_top.jpg)
 
 The pcb is easily reconfigurable for SRAM 512kbx8 or ATMEL-Flash.
+
+
+
+#Software
+
+![IMAGE](https://github.com/cbmuser/PET_EXPANSION/blob/main/images/periscope.jpg)
+
+The Periscope ist the monitor to discover problems or check sectors of a 64kB block. The tool awaits track and sector values as hexadecimal input. 
