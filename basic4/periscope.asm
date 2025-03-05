@@ -92,17 +92,15 @@ main:     jsr clrscr
           iny
           cpy #$17
           bne -
-          inc t_lo
-          
+         
           ldy #$00
-          
 -         lda (s_lo),y
           ora #$80
           sta (s_lo),y
           iny
           cpy #$0e
           bne -
-          dec t_lo
+
           
            
 ; keyboard
@@ -118,7 +116,6 @@ keys:
 +         cmp #$41
           bne +
           jsr move_addr 
-
 +         jmp - 
 
 
@@ -308,15 +305,13 @@ keyboard:
           cpy #$19
           bne -
           jmp warmstart
-
-
-+         cmp #$53      ; sector 
++         cmp #$53             ; sector 
           bne +
           jmp user_sector
-+         cmp #$54      ; track
++         cmp #$54             ; track
           bne +
           jmp user_track
-+         cmp #$52     ; restart
++         cmp #$52             ; restart
           bne +
           jmp main
 +         jmp keyboard
@@ -332,7 +327,7 @@ byteline:
           lda track                      
           ora #$80
           sta register1           
-; show ofset $xx
+; show offset $xx
           ldy #$00
           lda #"$"
           sta (s_lo),y 
