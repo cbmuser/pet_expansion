@@ -8,7 +8,7 @@
 ;
 ; build march 2025
 ;
-
+; revision 0.2
 
 s_lo         = $0a
 s_hi         = $0b
@@ -92,18 +92,15 @@ main:     jsr clrscr
           iny
           cpy #$17
           bne -
-          inc t_lo
-          
+                   
           ldy #$00
-          
 -         lda (s_lo),y
           ora #$80
           sta (s_lo),y
           iny
           cpy #$0e
           bne -
-          dec t_lo
-          
+         
            
 ; keyboard
 
@@ -308,15 +305,13 @@ keyboard:
           cpy #$19
           bne -
           jmp warmstart
-
-
-+         cmp #$53      ; sector 
++         cmp #$53            ; sector 
           bne +
           jmp user_sector
-+         cmp #$54      ; track
++         cmp #$54            ; track
           bne +
           jmp user_track
-+         cmp #$52     ; restart
++         cmp #$52            ; restart
           bne +
           jmp main
 +         jmp keyboard
@@ -332,7 +327,7 @@ byteline:
           lda track                      
           ora #$80
           sta register1           
-; show ofset $xx
+; show offset $xx
           ldy #$00
           lda #"$"
           sta (s_lo),y 
@@ -488,19 +483,19 @@ j:        lda #$80
 
 help:     ldy #$00
 -         lda $8000,y
-          sta $1100,y 
+          sta buffer+$100,y 
           lda helpscreen,y
           sta $8000,y
           lda $8100,y
-          sta $1200,y 
+          sta buffer+$200,y 
           lda helpscreen+$100,y
           sta $8100,y
           lda $8200,y
-          sta $1300,y 
+          sta buffer+$300,y 
           lda helpscreen+$200,y
           sta $8200,y
           lda $8300,y
-          sta $1400,y 
+          sta buffer+$400,y 
           lda helpscreen+$300,y
           sta $8300,y
           iny
@@ -510,13 +505,13 @@ help:     ldy #$00
           beq +
           bne -
 +         ldy #$00
--         lda $1100,y
+-         lda buffer+$100,y 
           sta $8000,y 
-          lda $1200,y
+          lda buffer+$200,y 
           sta $8100,y 
-          lda $1300,y
+          lda buffer+$300,y 
           sta $8200,y 
-          lda $1400,y
+          lda buffer+$400,y 
           sta $8300,y 
           iny
           bne -                    
@@ -675,5 +670,6 @@ helpscreen:
 !pet"        press space to go back          "
 !pet"                                        "
 
+buffer:
 
 
